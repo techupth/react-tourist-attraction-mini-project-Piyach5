@@ -80,7 +80,13 @@ function HomePage() {
                       </span>
                     ))}
                   และ
-                  <span className="tag" key={item.tags.length - 1}>
+                  <span
+                    className="tag"
+                    key={item.tags.length - 1}
+                    onClick={() => {
+                      handleClick(item.tags[item.tags.length - 1]);
+                    }}
+                  >
                     <a href="#">{item.tags[item.tags.length - 1]}</a>
                   </span>
                 </div>
